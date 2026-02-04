@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800;900&family=Inria+Serif:wght@300;400;700&display=swap');
+
+@theme {
+  --font-serif: "Inria Serif", serif;
+  --font-sans: Figtree, sans-serif;
+
+  --color-primary: #3B59DA;
+  --color-primary-dark: #2D44A7;
+  --color-accent-green: #D1FAE5;
+  --color-accent-purple: #F5F3FF;
+  --color-dosteon-black: #333333;
+  --color-dosteon-gray: #666666;
+  --color-dosteon-light: #F9FAFB;
+  --color-promo-light: #FAFBFF;
+  --aspect-21/9: 21 / 9;
+}
+
+:root {
+  font-family: Figtree, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, .font-serif {
+  font-family: 'Inria Serif', serif;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #F8F7F4; /* Creamy background from image */
+  color: #333333;
+  overflow-x: hidden;
+}
+
+.bg-pattern {
+  background-color: #F8F7F4;
+  background-image: radial-gradient(#E5E2D9 1.5px, transparent 1.5px);
+  background-size: 30px 30px;
+  /* Approximating the concentric circles with a subtle dot/grid first, 
+     then I'll try to use a more accurate SVG if possible */
+}
+
+.circles-pattern {
+  background-color: #F8F7F4;
+  background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg stroke='%23E5E2D9' stroke-width='0.5'%3E%3Ccircle cx='40' cy='40' r='10'/%3E%3Ccircle cx='40' cy='40' r='20'/%3E%3Ccircle cx='40' cy='40' r='30'/%3E%3Ccircle cx='40' cy='40' r='40'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.nav-pill {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
+  border-radius: 20px;
+}
+
+::selection {
+  background: var(--color-primary);
+  color: white;
+}
