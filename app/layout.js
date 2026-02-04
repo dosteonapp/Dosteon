@@ -17,7 +17,7 @@ export const metadata = {
   title: "Dosteon - Run your food business without guesswork",
   description: "The operating system for Africa's food supply chain, built for restaurants, cafés, and suppliers to grow together.",
   icons: {
-    icon: '/icon.png',
+    icon: { url: '/icon.svg', type: 'image/svg+xml' },
   },
 };
 
