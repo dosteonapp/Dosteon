@@ -50,7 +50,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="font-inriaSerif text-[#1D2120] leading-[1] mb-4 md:mb-6 font-bold text-[40px] md:text-[64px] tracking-[-0.04em] max-w-4xl"
+            className="font-inriaSerif text-[#1D2120] leading-none mb-4 md:mb-6 font-bold text-[40px] md:text-[64px] tracking-[-0.04em] max-w-4xl"
           >
             Keep your food business running smoothly, even when you’re not there.
           </Motion.h1>
