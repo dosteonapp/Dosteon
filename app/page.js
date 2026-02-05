@@ -23,7 +23,7 @@ export default function Home() {
       <WhyChooseSection />
       <SDGSection />
       <FoodFragileCTA />
-      <Footer />
+      <Footer variant="white" />
     </main>
   );
 }
