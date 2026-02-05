@@ -50,7 +50,7 @@ export function Footer({ variant = "dark" }) {
               <img 
                 src="/assets/logo.png" 
                 alt="Dosteon Logo" 
-                className={`h-8 md:h-10 w-auto ${!isWhite ? "brightness-0 invert" : ""}`}
+                className={`h-8 md:h-10 w-auto ${isWhite ? "brightness-0" : "brightness-0 invert"}`}
               />
             </Link>
             
