@@ -3,8 +3,21 @@
 import Link from "next/link";
 import { Button } from "../ui/Button";
 import { useState, useEffect } from "react";
-import { Menu, X, Linkedin, Instagram, Twitter, Facebook, ArrowRight } from "lucide-react";
+import { Menu, X, Linkedin, Instagram, Facebook, ArrowRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+
+const XLogo = ({ size = 18, className = "" }) => (
+  <svg 
+    width={size} 
+    height={size} 
+    viewBox="0 0 24 24" 
+    aria-hidden="true" 
+    className={className}
+    fill="currentColor"
+  >
+    <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932L18.901 1.153zM17.61 20.644h2.039L6.486 3.24H4.298l13.313 17.404z" />
+  </svg>
+);
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -30,7 +43,7 @@ export function Navbar() {
   const socialIcons = [
     { icon: Linkedin, href: "#", fill: true },
     { icon: Instagram, href: "#" },
-    { icon: Twitter, href: "#", fill: true },
+    { icon: XLogo, href: "#" },
     { icon: Facebook, href: "#", fill: true },
   ];
 
