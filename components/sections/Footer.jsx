@@ -1,7 +1,20 @@
 "use client";
 
 import Link from "next/link";
-import { Linkedin, Instagram, X, Facebook } from "lucide-react";
+import { Linkedin, Instagram, Facebook } from "lucide-react";
+
+const XLogo = ({ size = 18, className = "" }) => (
+  <svg 
+    width={size} 
+    height={size} 
+    viewBox="0 0 24 24" 
+    aria-hidden="true" 
+    className={className}
+    fill="currentColor"
+  >
+    <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932L18.901 1.153zM17.61 20.644h2.039L6.486 3.24H4.298l13.313 17.404z" />
+  </svg>
+);
 
 export function Footer({ variant = "dark" }) {
   const currentYear = new Date().getFullYear();
@@ -71,7 +84,7 @@ export function Footer({ variant = "dark" }) {
                 <Instagram size={20} />
               </Link>
               <Link href={socialLinks.x} target="_blank" rel="noopener noreferrer" className="hover:text-secondary transition-colors">
-                <X size={20} />
+                <XLogo size={20} />
               </Link>
               <Link href={socialLinks.facebook} target="_blank" rel="noopener noreferrer" className="hover:text-secondary transition-colors">
                 <Facebook size={20} fill="currentColor" />
@@ -135,7 +148,7 @@ export function Footer({ variant = "dark" }) {
               <Instagram size={18} />
             </Link>
             <Link href={socialLinks.x} target="_blank" rel="noopener noreferrer" className={`hover:${isWhite ? "text-secondary" : "text-white"} transition-colors`}>
-              <X size={18} />
+              <XLogo size={18} />
             </Link>
             <Link href={socialLinks.facebook} target="_blank" rel="noopener noreferrer" className={`hover:${isWhite ? "text-secondary" : "text-white"} transition-colors`}>
               <Facebook size={18} fill="currentColor" />
