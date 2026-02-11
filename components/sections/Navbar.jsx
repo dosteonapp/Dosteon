@@ -53,7 +53,7 @@ export function Navbar() {
         className="fixed top-4 left-0 right-0 z-100 transition-all duration-300 px-5 sm:px-6 lg:px-8"
       >
         <div
-          className={`max-w-7xl mx-auto rounded-[24px] transition-all duration-300 ${
+          className={`max-w-8-5xl mx-auto rounded-[24px] transition-all duration-300 ${
             isScrolled || isOpen
               ? "bg-white/90 backdrop-blur-md shadow-[0_8px_30px_rgb(0,0,0,0.06)] py-2.5"
               : "bg-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] py-3"

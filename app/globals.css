@@ -10,6 +10,9 @@
   --color-primary-dark: #2C43AF;
   --color-secondary: #0A1136;
   --color-accent: #10B981;
+
+  --spacing-8xl: 96rem;
+  --spacing-8-5xl: 104rem;
 }
 
 @layer base {
@@ -42,5 +45,5 @@ body {
 }
 
 .container-custom {
-  @apply max-w-7xl mx-auto px-5 sm:px-6 lg:px-8;
+  @apply max-w-8-5xl mx-auto;
 }

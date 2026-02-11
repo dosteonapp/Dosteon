@@ -53,7 +53,7 @@ export function Footer({ variant = "dark" }) {
   ];
 
   return (
-    <footer className={`${isWhite ? "bg-white text-secondary" : "bg-secondary text-white"} pt-16 md:pt-24 pb-8 md:pb-12 overflow-hidden border-t ${isWhite ? "border-gray-100" : "border-transparent"}`}>
+    <footer className={`${isWhite ? "bg-white text-secondary" : "bg-secondary text-white"} pt-16 md:pt-24 pb-8 md:pb-12 overflow-hidden border-t ${isWhite ? "border-gray-100" : "border-transparent"} px-5 sm:px-6 lg:px-8`}>
       <div className={`container-custom ${isWhite ? "relative" : ""}`}>
         {/* Main Footer Content */}
         <div className="flex flex-col md:flex-row justify-between gap-12 mb-16 md:mb-20">
@@ -67,39 +67,39 @@ export function Footer({ variant = "dark" }) {
               />
             </Link>
             
-            <p className={`${isWhite ? "text-gray-500/80" : "text-gray-400"} font-figtree font-medium italic mb-4 leading-relaxed text-[15px] md:text-[16px]`}>
+            <p className={`${isWhite ? "text-gray-500/80" : "text-gray-400"} font-figtree font-medium italic mb-6 leading-relaxed text-[15px] md:text-[16px]`}>
               Built for Africa. Designed for Scale. Powered by Intelligence.
             </p>
-            
-            <p className={`${isWhite ? "text-gray-500/70" : "text-gray-400"} font-figtree text-[14px] md:text-[15px] leading-relaxed max-w-sm mb-8 md:mb-0`}>
+
+            <p className={`${isWhite ? "text-gray-500/70" : "text-gray-400"} font-figtree text-[14px] md:text-[15px] leading-relaxed max-w-sm mb-10`}>
               The operating system for Africa’s food supply chain, built for restaurants, cafés, and suppliers to grow together.
             </p>
-
-            {/* Social Icons - Mobile Only (Stacks before lists) */}
-            <div className={`flex md:hidden items-center gap-6 mb-12 ${isWhite ? "text-gray-500" : "text-white/80"}`}>
-              <Link href={socialLinks.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-secondary transition-colors">
-                <Linkedin size={20} fill="currentColor" />
+            
+            {/* Social Icons - Top row for Mobile, aligned left in desktop for some variants or kept separate */}
+            <div className={`flex items-center gap-6 mb-12 md:mb-0 ${isWhite ? "text-secondary" : "text-white"}`}>
+              <Link href={socialLinks.linkedin} target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity">
+                <Linkedin size={24} fill="currentColor" />
               </Link>
-              <Link href={socialLinks.instagram} target="_blank" rel="noopener noreferrer" className="hover:text-secondary transition-colors">
-                <Instagram size={20} />
+              <Link href={socialLinks.instagram} target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity">
+                <Instagram size={24} />
               </Link>
-              <Link href={socialLinks.x} target="_blank" rel="noopener noreferrer" className="hover:text-secondary transition-colors">
-                <XLogo size={20} />
+              <Link href={socialLinks.x} target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity">
+                <XLogo size={22} />
               </Link>
-              <Link href={socialLinks.facebook} target="_blank" rel="noopener noreferrer" className="hover:text-secondary transition-colors">
-                <Facebook size={20} fill="currentColor" />
+              <Link href={socialLinks.facebook} target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity">
+                <Facebook size={24} fill="currentColor" />
               </Link>
             </div>
           </div>
 
           {/* Navigation Links Columns */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-10 md:gap-24 text-left">
+          <div className="flex flex-col md:grid md:grid-cols-3 gap-10 md:gap-24 text-left">
             {navColumns.map((col, idx) => (
               <div key={idx}>
-                <h4 className={`font-figtree font-bold text-[13px] uppercase tracking-widest mb-6 md:mb-8 ${isWhite ? "text-secondary" : "text-white"}`}>
+                <h4 className={`font-figtree font-bold text-[15px] md:text-[13px] md:uppercase md:tracking-widest mb-6 md:mb-8 ${isWhite ? "text-secondary" : "text-white"}`}>
                   {col.title}
                 </h4>
-                <ul className="space-y-3 md:space-y-4">
+                <ul className="space-y-4 md:space-y-4">
                   {col.links.map((link, i) => (
                     <li key={i}>
                       <Link 
@@ -122,41 +122,24 @@ export function Footer({ variant = "dark" }) {
         {/* Bottom Bar */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-6 md:pb-4">
           {/* Copyright */}
-          <p className={`${isWhite ? "text-gray-500/70" : "text-gray-400"} text-[13px] md:text-[14px] font-figtree order-1`}>
+          <p className={`${isWhite ? "text-[#1d2120]/60" : "text-gray-400"} text-[12px] md:text-[14px] font-figtree order-2 md:order-1`}>
             © {currentYear} Dosteon. All rights reserved.
           </p>
 
-          {/* Secondary Links - Centered on desktop in white variant */}
-          <div className={`flex items-center gap-6 md:gap-8 order-2 ${isWhite ? "md:absolute md:left-1/2 md:-translate-x-1/2" : ""}`}>
-            <Link href="#" className={`${isWhite ? "text-gray-500/70 hover:text-secondary" : "text-gray-400 hover:text-white"} text-[12px] md:text-[13px] font-figtree transition-colors font-medium`}>
+          {/* Secondary Links */}
+          <div className="flex items-center gap-6 md:gap-8 order-1 md:order-2">
+            <Link href="#" className={`${isWhite ? "text-[#1d2120]/60 hover:text-secondary" : "text-gray-400 hover:text-white"} text-[12px] md:text-[13px] font-figtree transition-colors font-medium`}>
               Terms
             </Link>
-            <Link href="#" className={`${isWhite ? "text-gray-500/70 hover:text-secondary" : "text-gray-400 hover:text-white"} text-[12px] md:text-[13px] font-figtree transition-colors font-medium`}>
+            <Link href="#" className={`${isWhite ? "text-[#1d2120]/60 hover:text-secondary" : "text-gray-400 hover:text-white"} text-[12px] md:text-[13px] font-figtree transition-colors font-medium`}>
               Privacy Policy
             </Link>
-            <Link href="#" className={`${isWhite ? "text-gray-500/70 hover:text-secondary" : "text-gray-400 hover:text-white"} text-[12px] md:text-[13px] font-figtree transition-colors font-medium`}>
+            <Link href="#" className={`${isWhite ? "text-[#1d2120]/60 hover:text-secondary" : "text-gray-400 hover:text-white"} text-[12px] md:text-[13px] font-figtree transition-colors font-medium`}>
               Status
-            </Link>
-          </div>
-
-          {/* Social Icons - Right aligned on desktop */}
-          <div className={`flex items-center gap-6 order-3 ${isWhite ? "text-gray-500" : "text-white/80"}`}>
-            <Link href={socialLinks.linkedin} target="_blank" rel="noopener noreferrer" className={`hover:${isWhite ? "text-secondary" : "text-white"} transition-colors`}>
-              <Linkedin size={18} fill="currentColor" />
-            </Link>
-            <Link href={socialLinks.instagram} target="_blank" rel="noopener noreferrer" className={`hover:${isWhite ? "text-secondary" : "text-white"} transition-colors`}>
-              <Instagram size={18} />
-            </Link>
-            <Link href={socialLinks.x} target="_blank" rel="noopener noreferrer" className={`hover:${isWhite ? "text-secondary" : "text-white"} transition-colors`}>
-              <XLogo size={18} />
-            </Link>
-            <Link href={socialLinks.facebook} target="_blank" rel="noopener noreferrer" className={`hover:${isWhite ? "text-secondary" : "text-white"} transition-colors`}>
-              <Facebook size={18} fill="currentColor" />
             </Link>
           </div>
         </div>
       </div>
     </footer>
-
   );
 }

@@ -1,12 +1,12 @@
 "use client";
 
-import { Box, Users, Lightbulb } from "lucide-react";
+import { Archive, Users, Lightbulb } from "lucide-react";
 import { motion as Motion } from "framer-motion";
 
 export function WhatDosteonDoes() {
   const cards = [
     {
-      icon: <Box className="text-white" size={24} />,
+      icon: <Archive className="text-white" size={24} />,
       title: "Inventory Management",
       description: "See your stock in real time. Track daily usage, spot waste early, and always know what’s running low, without spreadsheets or manual guesswork.",
     },
@@ -23,55 +23,63 @@ export function WhatDosteonDoes() {
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-[#f7f7f7] overflow-hidden">
+    <section className="py-16 md:py-24 bg-white overflow-hidden px-5 sm:px-6 lg:px-8">
       <div className="container-custom">
-        {/* Header Block */}
-        <div className="text-center mb-10 md:mb-16 max-w-3xl mx-auto">
-          <Motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="text-[28px] md:text-[40px] font-figtree text-[#1d2120] font-bold mb-4"
-          >
-            What Dosteon Does
-          </Motion.h2>
-          <Motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            viewport={{ once: true }}
-            className="text-[#6B7280] text-base md:text-lg font-figtree px-4 md:px-0"
-          >
-            Everything you need to run your food business with confidence
-          </Motion.p>
-        </div>
-        
-        {/* Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-          {cards.map((card, index) => (
-            <Motion.div 
-              key={index}
-              initial={{ opacity: 0, y: 30 }}
+        <div className="bg-[#f7f7f7] rounded-[48px] md:rounded-[80px] px-5 py-10 md:py-16 md:px-12 border border-gray-100/50 relative overflow-hidden">
+          {/* Header Block */}
+          <div className="text-left mb-16 md:mb-20 max-w-3xl relative z-10">
+            <Motion.h2 
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              transition={{ duration: 0.5 }}
               viewport={{ once: true }}
-              className="bg-white p-6 md:p-8 rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.05)] flex flex-col items-start text-left hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] transition-all duration-300"
+              className="text-[32px] md:text-[48px] font-inriaSerif text-[#1d2120] font-bold mb-4"
             >
-              {/* Icon Container */}
-              <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-6 shadow-lg shadow-blue-500/20">
-                {card.icon}
-              </div>
-              
-              <h3 className="text-[18px] md:text-[20px] font-bold text-[#1d2120] mb-4 font-figtree leading-tight">
-                {card.title}
-              </h3>
-              
-              <p className="text-[#6B7280] text-[15px] md:text-[16px] leading-relaxed font-medium font-figtree">
-                {card.description}
-              </p>
-            </Motion.div>
-          ))}
+              What Dosteon Does
+            </Motion.h2>
+            <Motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="text-[#6B7280] text-[16px] md:text-lg font-figtree"
+            >
+              Everything you need to run your food business with confidence
+            </Motion.p>
+          </div>
+          
+          {/* Cards Stack/Grid */}
+          <div className="flex flex-col gap-6 relative z-10 md:grid md:grid-cols-2 lg:grid-cols-3">
+            {cards.map((card, index) => (
+              <Motion.div 
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className={`bg-white px-5 py-8 md:p-10 rounded-[32px] shadow-[0_4px_25px_rgba(0,0,0,0.03)] border border-gray-50 flex flex-row items-center lg:flex-col lg:items-start text-left hover:shadow-[0_15px_45px_rgba(0,0,0,0.06)] transition-all duration-300 group gap-6 md:gap-8 ${index === 2 ? 'md:col-span-2 lg:col-span-1' : ''}`}
+              >
+                {/* Icon Container - Now horizontal on mobile */}
+                <div className="shrink-0 w-12 h-12 md:w-16 md:h-16 bg-[#EBEDFF] rounded-2xl flex items-center justify-center transition-transform group-hover:scale-110">
+                  <div className="text-primary">
+                    {index === 0 && <Archive className="w-6 h-6 md:w-8 md:h-8" />}
+                    {index === 1 && <Users className="w-6 h-6 md:w-8 md:h-8" />}
+                    {index === 2 && <Lightbulb className="w-6 h-6 md:w-8 md:h-8" />}
+                  </div>
+                </div>
+                
+                <div className="flex flex-col">
+                  <h3 className="text-[18px] md:text-[22px] font-bold text-[#1d2120] mb-2 lg:mb-5 font-inriaSerif leading-tight">
+                    {card.title}
+                  </h3>
+                  
+                  <p className="text-[#6B7280] text-[14px] md:text-[17px] leading-tight md:leading-relaxed font-figtree font-medium">
+                    {card.description}
+                  </p>
+                </div>
+              </Motion.div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

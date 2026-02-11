@@ -31,9 +31,9 @@ export function SDGSection() {
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-white overflow-hidden">
+    <section className="py-16 md:py-24 bg-white overflow-hidden px-5 sm:px-6 lg:px-8">
       <div className="container-custom">
-        <div className="relative bg-[#F0FFF8] py-16 md:py-24 px-5 md:px-16 rounded-[24px] md:rounded-lg overflow-hidden border border-green-50/50">
+        <div className="relative bg-[#F0FFF8] px-5 py-10 md:py-16 md:px-12 rounded-[48px] md:rounded-[80px] overflow-hidden border border-green-50/50">
           {/* Pattern Overlay */}
           <div 
             className="absolute inset-0 z-0 opacity-[0.05] pointer-events-none"
@@ -51,9 +51,9 @@ export function SDGSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
-                className="text-[28px] md:text-[40px] font-figtree text-[#1d2120] font-bold mb-4"
+                className="text-[32px] md:text-[48px] font-inriaSerif text-[#1d2120] font-bold mb-4"
               >
-                SDG Alignment
+                SDG Section
               </Motion.h2>
               <Motion.div 
                 initial={{ opacity: 0, y: 20 }}
@@ -72,7 +72,7 @@ export function SDGSection() {
             </div>
             
             {/* SDG Tiles Grid */}
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 max-w-4xl mx-auto px-2">
+            <div className="grid grid-cols-4 gap-2 md:gap-6 max-w-4xl mx-auto px-2">
               {sdgs.map((sdg, index) => (
                 <Motion.div 
                   key={sdg.id}

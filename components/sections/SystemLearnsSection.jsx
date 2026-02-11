@@ -19,9 +19,9 @@ export function SystemLearnsSection() {
   ];
 
   return (
-    <section className="py-12 md:py-20 bg-white">
+    <section className="py-16 md:py-24 bg-white px-5 sm:px-6 lg:px-8">
       <div className="container-custom">
-        <div className="bg-[#fbfcff] rounded-[32px] md:rounded-[48px] p-6 md:p-20 shadow-premium border border-gray-50">
+        <div className="bg-[#fbfcff] rounded-[48px] md:rounded-[80px] px-5 py-10 md:py-16 md:px-12 shadow-premium border border-gray-50">
           {/* Top Pill Label */}
           <div className="flex justify-center mb-6 md:mb-8">
             <div className="inline-flex items-center gap-2 bg-[#beffd7] border border-[#beffd7] px-4 py-1.5 rounded-full shadow-sm">
@@ -34,8 +34,8 @@ export function SystemLearnsSection() {
 
           {/* Headline */}
           <div className="text-center mb-10 md:mb-16">
-            <h2 className="text-[32px] md:text-[54px] font-figtree text-[#1d2120] font-bold leading-[1.1]">
-              A system that learns as you use it.
+            <h2 className="text-[32px] md:text-[54px] font-inriaSerif text-[#1d2120] font-bold leading-[1.1]">
+              A system that learns as you work.
             </h2>
           </div>
 
@@ -51,16 +51,16 @@ export function SystemLearnsSection() {
 
             {/* Right Column - Content Box */}
             <div className="flex flex-col gap-5 md:gap-6">
-              <p className="text-[18px] md:text-[20px] font-figtree font-bold text-[#1d2120]">
+              <p className="text-[18px] md:text-[20px] font-inriaSerif font-bold text-[#1d2120]">
                 Dosteon doesn't just record data. It uses it.
               </p>
 
-              <div className="bg-white rounded-[24px] md:rounded-3xl p-5 md:p-7 border border-gray-100 shadow-sm border-l-4 border-l-primary/10">
+              <div className="bg-white rounded-[28px] md:rounded-3xl p-5 md:p-7 border border-gray-100 shadow-sm border-l-4 border-l-primary/10">
                 <p className="text-[#4B5563] text-[15px] md:text-[16px] font-figtree font-medium mb-4 leading-relaxed">
                   It learns from usage, deliveries, and patterns across the network to:
                 </p>
 
-                <ul className="space-y-3 mb-5">
+                <ul className="space-y-7 mb-5">
                   {learningPoints.map((point, index) => (
                     <li key={index} className="flex gap-4 items-center">
                       <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center shrink-0 shadow-md shadow-blue-500/10">
