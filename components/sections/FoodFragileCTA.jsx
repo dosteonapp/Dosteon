@@ -25,11 +25,10 @@ export function FoodFragileCTA() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 viewport={{ once: true }}
-                className="text-[36px] md:text-[72px] font-inriaSerif mb-8 md:mb-10 leading-[1.05] max-w-6xl mx-auto font-bold tracking-tight"
+                className="text-[36px] md:text-[72px] font-inriaSerif mb-8 md:mb-10 leading-[1.05] max-w-6xl mx-auto font-semibold tracking-tight"
               >
-                <span className="block md:inline">Food systems </span>
-                <span className="block md:inline">shouldn't be </span>
-                <span className="block md:inline">fragile.</span>
+                <span className="block">Food supply chains</span>
+                <span className="block">shouldn't be fragile.</span>
               </Motion.h2>
 
               <Motion.p
